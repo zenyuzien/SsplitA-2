@@ -6,7 +6,7 @@ in a high level, this program aims to tell how to split the rules from the rule 
 
 ## how does the program do it ?
 
-well, let this be answered in a comprehensive manner.
+well, let this be answered in a comprehensive manner. First, in a high level without code, after that, code will be explained.
 
 ### INPUT structure
 
@@ -65,8 +65,13 @@ The problem can be split to 2 sub-problems:<br> 1) to identify intersections <br
 ### To identify intersections
 
 This program takes brute force approach to identify all the intersections. All possible packets from the fields' ranges are generated to check which all rules it satisfies. All the rules which are satisfied from each packet are stored in a container, and this small container which contains the satisfied rules for a packet, will be appended to a larger container which contains all the small-containers which has the rules satisfied by every packet. After all packets are tested, the duplicates from the large container are removed. Hence we are left with unique intersections.
-The complexity of this method is O(product(all dimension ranges)* no.of rules* no.of dimensions)
 
+### to split intersections
 
+The aim is to split the rules such that intersections are reduced. This problem can be reduced to MAX-SAT problem and it is a known fact that to perfectly split to reduce maximum number of intersections is a NP-hard problem. However, this program uses Set split approach which is based on Johnson's algorithm which is an 3/4 approximation algorithm (it is guaranteed that every intersection contains at least 2 literals ((2^k -1 / 2^k)=3/4) ). The rule numbers which are involved in intersections will be split to 2 sets and the program prints to console on which rule numbers in set 1 and which all in set2. The rules which aren't involved in any intersections in the first place are not sent to any set specifically as it doesn't matter. Detailed explanation of the algorithm will be explained with code.
+
+## Code explanation
+
+### INPUT
 
 
