@@ -11,10 +11,10 @@ well, let this be answered in a comprehensive manner.
 ### INPUT structure
 
 for the program SSA-2(5).cpp:
-seperated by spaces or new lines:
-<em>number of rules</em>
-<em>max value in each dimension/field (minimum is considered to be zero)</em>
-for each rule, 10 values to be input. the range (2 values) of 5 dimensions.
+seperated by spaces or new lines:<br>
+<em>number of rules</em><br>
+<em>max value in each dimension/field (minimum is considered to be zero)</em><br>
+for each rule, 10 values to be input. the range (2 values) of 5 dimensions.<br>
 
 eg. for this sample rule database with 5 fixed dimensions
 
@@ -33,3 +33,38 @@ the input would be:<br>
 0 5 1 7 0 15 0 31 16 31<br>
 9 9 8 15 0 15 0 31 16 31<br>
 or all in single line or all in newlines, wouldn't matter as the method of input is just console input ( cin >> ).
+
+
+for the program SSA-2.cpp:
+seperated by spaces or new lines:<br>
+<em>maximum value in every field - input is the exponent of 2</em><br>
+<em>number of rules, number of dimensions for each rule</em><br>
+for each rule, 2*(dimensions) values to be input. the range (2 values) of dimensions.<br>
+
+eg. for this sample rule database with 4 dimensions
+
+| Rule no |  dim1  |  dim2  |  dim3  |  dim4  |
+| ------- | ------ | ------ | ------ | ------ |
+|    1    | 0 - 5  | 1 - 7  | 0 - 15 | 0 - 31 |
+|    2    | 6 - 15 | 1 - 7  | 8 - 15 | 16 -31 |
+|    3    | 0 - 5  | 1 - 7  | 0 - 15 | 0 - 31 |
+|    4    | 9 - 9  | 8 - 15 | 0 - 15 | 0 - 31 |
+
+the input would be:<br>
+5<br>
+4 4<br>
+0 5 1 7 0 15 0 31<br>
+6 15 1 7 8 15 16 31<br>
+0 5 1 7 0 15 0 31<br>
+9 9 8 15 0 15 <br>
+
+### approach of solving
+
+The problem can be split to 2 sub-problems:<br> 1) to identify intersections <br> 2) to split rules based on intersections
+
+### To identify intersections
+
+
+
+
+
