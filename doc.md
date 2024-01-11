@@ -64,6 +64,8 @@ The problem can be split to 2 sub-problems:<br> 1) to identify intersections <br
 
 ### To identify intersections
 
+This program takes brute force approach to identify all the intersections. All possible packets from the fields' ranges are generated to check which all rules it satisfies. All the rules which are satisfied from each packet are stored in a container, and this small container which contains the satisfied rules for a packet, will be appended to a larger container which contains all the small-containers which has the rules satisfied by every packet. After all packets are tested, the duplicates from the large container are removed. Hence we are left with unique intersections.
+The complexity of this method is O(product(all dimension ranges)* no.of rules* no.of dimensions)
 
 
 
