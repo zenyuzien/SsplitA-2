@@ -141,9 +141,9 @@ struct ssa_utility
     vector< struct ssa_clause > CL;
 };
 ```
-nf -- <em>number of rules<em><br>
-table  -- <em>stores all the indicies of CL where the rule number is included in the positive clause<em><br>
-CL -- -- <em>list of all clauses- positive and negative<em><br>
+nf -- <em>number of rules</em><br>
+table  -- <em>stores all the indicies of CL where the rule number is included in the positive clause</em><br>
+CL -- -- <em>list of all clauses- positive and negative</em><br>
 eg. if CL = {{1,2,3},{-1,-2,-3},{2,3},{-2,-3},{1,3},{-1,-3}}
 the table would be table = {{0,4},{0,2},{0,2,4}}
 index 0 ~ rule 1 -- {0,4} => CL[0], CL[4] are positive clauses which include rule 1. And CL[1], CL[5] are negative clauses which include rule 1<br>
@@ -157,9 +157,9 @@ struct ssa_clause
     bool flag;
 }; 
 ```
-cost -- <em>weight of the clause<em><br>
-C -- <em>the rule numbers involved in intersection, positive integers mean positive cluase, negative integers mean negative cluase<em><br>
-flag -- <em>used in SSA-2 algorithm<em><br>
+cost -- <em>weight of the clause</em><br>
+C -- <em>the rule numbers involved in intersection, positive integers mean positive cluase, negative integers mean negative cluase</em><br>
+flag -- <em>used in SSA-2 algorithm</em><br>
 ```cpp
 struct ssa_utility ssa_g ;
 vector <int> s1,s2 ;
@@ -192,6 +192,53 @@ vector<int> packet(5,0);
 5 loops, 1 loop for each dimension taking all possible values given by the user. 
 
 ### 4. check which all filters the generated packet satisfies
+
+let the packet iterate through the rules, a loop for that. Within each rule, let it iterate through fields. A nested loop for that.
+If a packet satisfies every field of at least 2 rules, that's an intersection.
+
+so, a flag to check if the packet satisfied every dimension -- bool full <br>
+Now if the packet checks out to be full, how do we know if it is the first filter to be satisfied? It needs to satisfy 2 filters minimum for generating an intersection. Hence a flag -- bool at1 <br>
+It will be false at first, when the first packet satisfies the 'full' flag, at1 will be set true. So when the packet satisfies a second literal, a new intersection will be instantized. <br>
+But there is yet another concern - when the packet satisfies a 2nd rule, it will instantize an intersection, but it should only append the first satisfied filter once. So a flag for that again -- bool atf <br>
+and an integer to store the first rule --  int first <br> 
+code snippet for above description:
+```cpp
+at1 = false ;
+atf = true ;
+
+for(q = 0 ; q < g.nR ; q++) // n
+{
+     bool full = true ; 
+     for( r = 0 ; r < 5 ; r++ )
+     {
+          if( packet[r] < g.v[q][r].first || packet[r] > g.v[q][r].second  )
+          {
+               full = false ;
+               break ;
+          }
+     }
+          if(full)
+          {
+                if(at1) # if already satisfied at least 1 rule
+                {
+                    if(atf) # if it is the 2nd rule satisfied, create new intersection
+                    {
+                        intersection.nI++;
+                        intersection.vi.push_back(vector<int>());
+                        intersection.vi[intersection.nI -1].push_back(first);  
+                        atf =false;
+                    }
+                    # directly appending to existing intersection
+                    intersection.vi[intersection.nI -1].push_back(q+1);
+                }
+                else # first rule satisfied
+                {
+                    first = q+1 ; # store the first rule so append when another rule satisfied
+                    at1= true; 
+                }
+         }
+}
+```
 
 
 
