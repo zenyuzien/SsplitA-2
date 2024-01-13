@@ -102,15 +102,15 @@ p    -- <em>exponent of 2 for the maximum value possible for any field</em><br>
 nD    -- <em>number of dimensions/fields for a rule</em><br>
 v     -- <em>stores the range of the corresponding field for all fields and for all rules</em><br>
 
-### algo1 - the main function which does the job
+## algo1 - the main function which does the job
 
 ```cpp
 void algo1(const struct input_geometry& g )
 ```
-parameter: const reference of struct input_geometry
+parameter: const reference of struct input_geometry, argument variable name: g. Will be used in below snippets. To refer to this data structure.
 
-Algorithm:
-1) Initialise data structures for storing implementations
+### Algorithm:
+### 1) Initialise data structures for storing intersections
 ```cpp
 struct intersections_list 
 {
@@ -131,6 +131,7 @@ intersection.nI = 0 ;
 As mentioned earlier, to generate all possible packets and to check with all rules in the dataset,
 
 
+### 2. initialise data structures for SSA-2
 structure for SSA:
 ```cpp
 struct ssa_utility 
@@ -159,9 +160,16 @@ struct ssa_clause
 cost -- <em>weight of the clause<em><br>
 C -- <em>the rule numbers involved in intersection, positive integers mean positive cluase, negative integers mean negative cluase<em><br>
 flag -- <em>used in SSA-2 algorithm<em><br>
+```cpp
+struct ssa_utility ssa_g ;
+vector <int> s1,s2 ;
+ssa_g.nf = g.nR ;
+ssa_g.table.resize(ssa_g.nf);
+```
+the s1 is the set1, will contain the rule numbers to be split to set 1. And the s2 is set2. If a rule in not in any of s1,s2, it means it can be in any set.
 
 
-### generating all possible packets possible
+### 3. generating all possible packets possible
 
 ```cpp
 vector<int> packet(5,0);
@@ -177,9 +185,14 @@ vector<int> packet(5,0);
     for (int i4 = 0; i4 <= g.range[4]; ++i4) {
     packet[4] = i4;
 
-    // processing 'packet' 
+    // process the packet in furthur steps
 
 }}}}}
 ```
 5 loops, 1 loop for each dimension taking all possible values given by the user. 
+
+### 4. check which all filters the generated packet satisfies
+
+
+
 
