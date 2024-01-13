@@ -31,21 +31,6 @@ bool vectorCompare(const std::vector<int>& a, const std::vector<int>& b) {
     return std::lexicographical_compare(a.begin(), a.end(), b.begin(), b.end());
 }
 
-vector<pair<int, int>> merge(vector<pair<int, int>>& intervals) {
-    sort(intervals.begin(), intervals.end());
-    vector<pair<int, int>> output;
-
-    for (auto& interval : intervals) {
-        if (output.empty() || output.back().second < interval.first) {
-            output.push_back(interval);
-        } else {
-            output.back().second = max(output.back().second, interval.second);
-        }
-    }
-    return output;
-}
-
-
 void removeDuplicateVectors(vector<vector<int>>& vec) {
     // Step 1: Sort the vectors
     sort(vec.begin(), vec.end(), vectorCompare);
