@@ -6,6 +6,8 @@ in a high level, this program aims to tell how to split the rules from the rule 
 
 ## how does the program do it ?
 
+SSA-2.cpp - rules can have any number of dimensions, and the maximum value is fixed for all fields
+SSA-2(5).cpp - rules have fixed 5 dimensions, and each dimension can have different maximum values ( different ranges )
 well, let this be answered in a comprehensive manner. First, in a high level without code, after that, code will be explained.
 
 ### INPUT structure
@@ -73,5 +75,33 @@ The aim is to split the rules such that intersections are reduced. This problem 
 ## Code explanation
 
 ### INPUT
+
+for SSA-2(5).cpp
+```cpp
+struct input_geometry 
+{
+    int nR ;
+    vector<int> range;
+    vector< vector< pair<int, int> > > v ;
+};
+```
+nR    -- <em>number of rules</em><br>
+range -- <em>stories the maximum value for each of the 5 fields</em><br>
+v     -- <em>stores the range of the corresponding field for all fields and for all rules</em><br>
+
+for SSA-2.cpp
+```cpp
+struct input_geometry 
+{
+    int p, nR , nD ;
+    vector< vector< pair<int, int> > > v ;
+};
+```
+nR    -- <em>number of rules</em><br>
+p    -- <em>exponent of 2 for the maximum value possible for any field</em><br>
+nD    -- <em>number of dimensions/fields for a rule</em><br>
+v     -- <em>stores the range of the corresponding field for all fields and for all rules</em><br>
+
+
 
 
