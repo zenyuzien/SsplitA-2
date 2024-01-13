@@ -219,21 +219,21 @@ for(q = 0 ; q < g.nR ; q++) // n
      }
           if(full)
           {
-                if(at1) # if already satisfied at least 1 rule
+                if(at1) // if already satisfied at least 1 rule
                 {
-                    if(atf) # if it is the 2nd rule satisfied, create new intersection
+                    if(atf) // if it is the 2nd rule satisfied, create new intersection
                     {
                         intersection.nI++;
                         intersection.vi.push_back(vector<int>());
                         intersection.vi[intersection.nI -1].push_back(first);  
                         atf =false;
                     }
-                    # directly appending to existing intersection
+                    // directly appending to existing intersection
                     intersection.vi[intersection.nI -1].push_back(q+1);
                 }
-                else # first rule satisfied
+                else // first rule satisfied
                 {
-                    first = q+1 ; # store the first rule so append when another rule satisfied
+                    first = q+1 ; // store the first rule so append when another rule satisfied
                     at1= true; 
                 }
          }
