@@ -1,0 +1,26 @@
+For the input textfile
+no.of rules: 9
+new iteration, new starter value: 8
+new iteration, new starter value: 19
+new iteration, new starter value: 20
+no. of intersections: 13
+The total elapsed time to find intersections: 0.232244 seconds
+
+after SSA-2
+set1: 4 rules 
+set2: 5 rules 
+set3(any set): 0 rules
+
+In set1:
+no.of rules: 4
+new iteration, new starter value: 3
+new iteration, new starter value: 4
+no. of intersections: 1
+The total elapsed time to find intersections: 0.0105194 seconds
+
+In set2:
+no.of rules: 5
+new iteration, new starter value: 4
+new iteration, new starter value: 7
+no. of intersections: 3
+The total elapsed time to find intersections: 0.0197602 seconds
