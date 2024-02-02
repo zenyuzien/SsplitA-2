@@ -1,0 +1,121 @@
+For the input textfile
+no.of rules: 6
+new iteration, new starter value: 5
+new iteration, new starter value: 12
+new iteration, new starter value: 19
+no. of intersections: 10
+The total elapsed time to find intersections: 0.000727 seconds
+
+after SSA-2 C:/Users/rushi/Downloads/SSA-2_updated/linear_asc/
+set1: 5 rules 
+set2: 1 rules 
+set3(any set): 0 rules
+
+In set1:
+no.of rules: 5
+new iteration, new starter value: 4
+new iteration, new starter value: 10
+new iteration, new starter value: 11
+no. of intersections: 5
+The total elapsed time to find intersections: 0.0003133 seconds
+
+In set2:
+no.of rules: 1
+new iteration, new starter value: 0
+no. of intersections: 0
+The total elapsed time to find intersections: 1.73e-05 seconds
+
+after SSA-2 C:/Users/rushi/Downloads/SSA-2_updated/linear_dsc/
+set1: 3 rules 
+set2: 3 rules 
+set3(any set): 0 rules
+
+In set1:
+no.of rules: 3
+new iteration, new starter value: 2
+new iteration, new starter value: 3
+no. of intersections: 3
+The total elapsed time to find intersections: 3.04e-05 seconds
+
+In set2:
+no.of rules: 3
+new iteration, new starter value: 2
+new iteration, new starter value: 3
+no. of intersections: 1
+The total elapsed time to find intersections: 1.81e-05 seconds
+
+after SSA-2 C:/Users/rushi/Downloads/SSA-2_updated/no_clauses_mim/
+set1: 3 rules 
+set2: 3 rules 
+set3(any set): 0 rules
+
+In set1:
+no.of rules: 3
+new iteration, new starter value: 2
+new iteration, new starter value: 3
+no. of intersections: 3
+The total elapsed time to find intersections: 3.65e-05 seconds
+
+In set2:
+no.of rules: 3
+new iteration, new starter value: 2
+new iteration, new starter value: 3
+no. of intersections: 1
+The total elapsed time to find intersections: 3.86e-05 seconds
+
+after SSA-2 C:/Users/rushi/Downloads/SSA-2_updated/no_clauses_max/
+set1: 5 rules 
+set2: 1 rules 
+set3(any set): 0 rules
+
+In set1:
+no.of rules: 5
+new iteration, new starter value: 4
+new iteration, new starter value: 10
+new iteration, new starter value: 11
+no. of intersections: 5
+The total elapsed time to find intersections: 0.0001534 seconds
+
+In set2:
+no.of rules: 1
+new iteration, new starter value: 0
+no. of intersections: 0
+The total elapsed time to find intersections: 1.33e-05 seconds
+
+after SSA-2 C:/Users/rushi/Downloads/SSA-2_updated/ratio_1/
+set1: 5 rules 
+set2: 1 rules 
+set3(any set): 0 rules
+
+In set1:
+no.of rules: 5
+new iteration, new starter value: 4
+new iteration, new starter value: 10
+new iteration, new starter value: 11
+no. of intersections: 5
+The total elapsed time to find intersections: 0.00015 seconds
+
+In set2:
+no.of rules: 1
+new iteration, new starter value: 0
+no. of intersections: 0
+The total elapsed time to find intersections: 1.32e-05 seconds
+
+after SSA-2 C:/Users/rushi/Downloads/SSA-2_updated/ratio_2/
+set1: 1 rules 
+set2: 5 rules 
+set3(any set): 0 rules
+
+In set1:
+no.of rules: 1
+new iteration, new starter value: 0
+no. of intersections: 0
+The total elapsed time to find intersections: 1.76e-05 seconds
+
+In set2:
+no.of rules: 5
+new iteration, new starter value: 4
+new iteration, new starter value: 10
+new iteration, new starter value: 11
+no. of intersections: 5
+The total elapsed time to find intersections: 0.0002752 seconds
