@@ -1,0 +1,94 @@
+For the input textfile
+no.of rules: 752
+no. of intersections: 754
+The total elapsed time to find intersections: 2.07349 seconds
+
+after SSA-2 C:/Users/rushi/Downloads/SSA-2_updated/linear_asc/
+set1: 148 rules 
+set2: 604 rules 
+set3(any set): 0 rules
+
+In set1:
+no.of rules: 148
+no. of intersections: 137
+The total elapsed time to find intersections: 0.0394304 seconds
+
+In set2:
+no.of rules: 604
+no. of intersections: 601
+The total elapsed time to find intersections: 0.702617 seconds
+
+after SSA-2 C:/Users/rushi/Downloads/SSA-2_updated/linear_dsc/
+set1: 4 rules 
+set2: 748 rules 
+set3(any set): 0 rules
+
+In set1:
+no.of rules: 4
+no. of intersections: 2
+The total elapsed time to find intersections: 0.0010938 seconds
+
+In set2:
+no.of rules: 748
+no. of intersections: 740
+The total elapsed time to find intersections: 2.34295 seconds
+
+after SSA-2 C:/Users/rushi/Downloads/SSA-2_updated/no_clauses_mim/
+set1: 112 rules 
+set2: 640 rules 
+set3(any set): 0 rules
+
+In set1:
+no.of rules: 112
+no. of intersections: 101
+The total elapsed time to find intersections: 0.0294986 seconds
+
+In set2:
+no.of rules: 640
+no. of intersections: 638
+The total elapsed time to find intersections: 1.76019 seconds
+
+after SSA-2 C:/Users/rushi/Downloads/SSA-2_updated/no_clauses_max/
+set1: 9 rules 
+set2: 743 rules 
+set3(any set): 0 rules
+
+In set1:
+no.of rules: 9
+no. of intersections: 0
+The total elapsed time to find intersections: 0.0013408 seconds
+
+In set2:
+no.of rules: 743
+no. of intersections: 742
+The total elapsed time to find intersections: 2.77756 seconds
+
+after SSA-2 C:/Users/rushi/Downloads/SSA-2_updated/ratio_1/
+set1: 2 rules 
+set2: 750 rules 
+set3(any set): 0 rules
+
+In set1:
+no.of rules: 2
+no. of intersections: 1
+The total elapsed time to find intersections: 0.0005876 seconds
+
+In set2:
+no.of rules: 750
+no. of intersections: 742
+The total elapsed time to find intersections: 2.84577 seconds
+
+after SSA-2 C:/Users/rushi/Downloads/SSA-2_updated/ratio_2/
+set1: 6 rules 
+set2: 746 rules 
+set3(any set): 0 rules
+
+In set1:
+no.of rules: 6
+no. of intersections: 4
+The total elapsed time to find intersections: 0.001364 seconds
+
+In set2:
+no.of rules: 746
+no. of intersections: 619
+The total elapsed time to find intersections: 2.95811 seconds
