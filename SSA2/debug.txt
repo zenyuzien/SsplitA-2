@@ -1,0 +1,7 @@
+For the input textfile
+ -11462 373.102
+after SSA-2 C:/Users/rushi/Downloads/SSA-2_updated/HYBRID_min/
+set1: 201 rules 
+set2: 9402 rules 
+set3(any set): 0 rules
+ -228 0.147251 -10658 372.11
